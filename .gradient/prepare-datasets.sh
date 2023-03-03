@@ -29,13 +29,6 @@ symlink-public-resources() {
 
 }
 
-if [ ! "$(command -v fuse-overlayfs)" ]
-then
-    echo "fuse-overlayfs not found installing - please update to our latest image"
-    apt update -y
-    apt install -o DPkg::Lock::Timeout=120 -y psmisc libfuse3-dev fuse-overlayfs
-fi
-
 
 echo "Starting preparation of datasets"
 # symlink exe_cache files

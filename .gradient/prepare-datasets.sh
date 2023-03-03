@@ -26,7 +26,6 @@ symlink-public-resources() {
     mkdir -p ${workdir}
     mkdir -p ${upperdir}
     fuse-overlayfs -o lowerdir=${public_source_dir},upperdir=${upperdir},workdir=${workdir} ${target_dir}
-
 }
 
 
